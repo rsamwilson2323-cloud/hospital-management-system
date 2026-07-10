@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "patientId": 1,
+    "doctorId": 1,
+    "date": "2026-07-09",
+    "time": "09:00",
+    "status": "scheduled",
+    "notes": "Regular cardiac checkup – BP monitoring",
+    "createdAt": "2026-07-07T07:53:13.324Z"
+  },
+  {
+    "id": 2,
+    "patientId": 2,
+    "doctorId": 7,
+    "date": "2026-07-09",
+    "time": "10:30",
+    "status": "scheduled",
+    "notes": "HbA1c review and insulin adjustment",
+    "createdAt": "2026-07-07T07:53:13.324Z"
+  },
+  {
+    "id": 3,
+    "patientId": 13,
+    "doctorId": 7,
+    "date": "2026-07-09",
+    "time": "11:30",
+    "status": "scheduled",
+    "notes": "Thyroid & blood sugar management",
+    "createdAt": "2026-07-07T07:53:13.324Z"
+  },
+  {
+    "id": 4,
+    "patientId": 3,
+    "doctorId": 8,
+    "date": "2026-07-09",
+    "time": "14:00",
+    "status": "scheduled",
+    "notes": "Asthma follow-up, spirometry planned",
+    "createdAt": "2026-07-07T07:53:13.324Z"
+  },
+  {
+    "id": 5,
+    "patientId": 15,
+    "doctorId": 1,
+    "date": "2026-07-09",
+    "time": "15:30",
+    "status": "scheduled",
+    "notes": "Post-cardiac event follow-up",
+    "createdAt": "2026-07-08T07:53:13.324Z"
+  },
+  {
+    "id": 6,
+    "patientId": 4,
+    "doctorId": 4,
+    "date": "2026-07-08",
+    "time": "09:00",
+    "status": "completed",
+    "notes": "Knee pain – X-ray ordered",
+    "createdAt": "2026-07-06T07:53:13.324Z"
+  },
+  {
+    "id": 7,
+    "patientId": 5,
+    "doctorId": 2,
+    "date": "2026-07-08",
+    "time": "10:00",
+    "status": "completed",
+    "notes": "Annual physical examination",
+    "createdAt": "2026-07-06T07:53:13.324Z"
+  },
+  {
+    "id": 8,
+    "patientId": 9,
+    "doctorId": 3,
+    "date": "2026-07-08",
+    "time": "11:00",
+    "status": "completed",
+    "notes": "Migraine – MRI results reviewed",
+    "createdAt": "2026-07-06T07:53:13.324Z"
+  },
+  {
+    "id": 9,
+    "patientId": 10,
+    "doctorId": 7,
+    "date": "2026-07-08",
+    "time": "14:00",
+    "status": "completed",
+    "notes": "Hypothyroidism – levothyroxine dose review",
+    "createdAt": "2026-07-06T07:53:13.324Z"
+  },
+  {
+    "id": 10,
+    "patientId": 6,
+    "doctorId": 1,
+    "date": "2026-07-07",
+    "time": "09:30",
+    "status": "completed",
+    "notes": "ECG and lung function test",
+    "createdAt": "2026-07-05T07:53:13.324Z"
+  },
+  {
+    "id": 11,
+    "patientId": 11,
+    "doctorId": 6,
+    "date": "2026-07-07",
+    "time": "11:00",
+    "status": "completed",
+    "notes": "Oncology follow-up – remission check",
+    "createdAt": "2026-07-05T07:53:13.324Z"
+  },
+  {
+    "id": 12,
+    "patientId": 7,
+    "doctorId": 3,
+    "date": "2026-07-07",
+    "time": "14:30",
+    "status": "cancelled",
+    "notes": "Headache – patient cancelled",
+    "createdAt": "2026-07-05T07:53:13.324Z"
+  },
+  {
+    "id": 13,
+    "patientId": 8,
+    "doctorId": 4,
+    "date": "2026-07-06",
+    "time": "10:00",
+    "status": "completed",
+    "notes": "Post-hip surgery check-up",
+    "createdAt": "2026-07-04T07:53:13.324Z"
+  },
+  {
+    "id": 14,
+    "patientId": 12,
+    "doctorId": 2,
+    "date": "2026-07-06",
+    "time": "11:30",
+    "status": "completed",
+    "notes": "General check-up – healthy",
+    "createdAt": "2026-07-04T07:53:13.324Z"
+  },
+  {
+    "id": 15,
+    "patientId": 14,
+    "doctorId": 5,
+    "date": "2026-07-06",
+    "time": "15:00",
+    "status": "completed",
+    "notes": "Sports injury – shoulder strain",
+    "createdAt": "2026-07-04T07:53:13.324Z"
+  },
+  {
+    "id": 16,
+    "patientId": 1,
+    "doctorId": 2,
+    "date": "2026-07-10",
+    "time": "09:00",
+    "status": "scheduled",
+    "notes": "Lab results review",
+    "createdAt": "2026-07-08T07:53:13.324Z"
+  },
+  {
+    "id": 17,
+    "patientId": 2,
+    "doctorId": 6,
+    "date": "2026-07-10",
+    "time": "11:00",
+    "status": "scheduled",
+    "notes": "Oncology consultation",
+    "createdAt": "2026-07-08T07:53:13.324Z"
+  },
+  {
+    "id": 18,
+    "patientId": 5,
+    "doctorId": 3,
+    "date": "2026-07-11",
+    "time": "10:00",
+    "status": "scheduled",
+    "notes": "Neurology follow-up",
+    "createdAt": "2026-07-08T07:53:13.324Z"
+  },
+  {
+    "id": 19,
+    "patientId": 3,
+    "doctorId": 1,
+    "date": "2026-07-11",
+    "time": "14:30",
+    "status": "scheduled",
+    "notes": "Chest X-ray review",
+    "createdAt": "2026-07-08T07:53:13.324Z"
+  },
+  {
+    "id": 20,
+    "patientId": 6,
+    "doctorId": 8,
+    "date": "2026-07-12",
+    "time": "09:30",
+    "status": "scheduled",
+    "notes": "Pulmonary rehab review",
+    "createdAt": "2026-07-08T07:53:13.324Z"
+  },
+  {
+    "id": 21,
+    "patientId": 13,
+    "doctorId": 2,
+    "date": "2026-07-12",
+    "time": "11:00",
+    "status": "scheduled",
+    "notes": "General diabetes management",
+    "createdAt": "2026-07-08T07:53:13.324Z"
+  },
+  {
+    "id": 22,
+    "patientId": 15,
+    "doctorId": 4,
+    "date": "2026-07-13",
+    "time": "10:30",
+    "status": "scheduled",
+    "notes": "Joint pain assessment",
+    "createdAt": "2026-07-08T07:53:13.324Z"
+  }
+]

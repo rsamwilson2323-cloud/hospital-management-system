@@ -1,0 +1,1 @@
+{"version":3,"file":"medicineInput.d.ts","sourceRoot":"","sources":["../../../src/generated/types/medicineInput.ts"],"names":[],"mappings":"AAAA;;;;;;GAMG;AAEH,MAAM,WAAW,aAAa;IAC5B,mBAAmB;IACnB,IAAI,EAAE,MAAM,CAAC;IACb,iBAAiB;IACjB,QAAQ,EAAE,MAAM,CAAC;IACjB,UAAU,CAAC,EAAE,MAAM,CAAC;IACpB,KAAK,EAAE,MAAM,CAAC;IACd,YAAY,CAAC,EAAE,MAAM,CAAC;IACtB,QAAQ,CAAC,EAAE,MAAM,CAAC;CACnB"}

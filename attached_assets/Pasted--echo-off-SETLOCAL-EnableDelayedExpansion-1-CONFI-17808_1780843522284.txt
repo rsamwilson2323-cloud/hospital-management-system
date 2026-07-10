@@ -1,0 +1,68 @@
+@echo off
+SETLOCAL EnableDelayedExpansion
+
+:: ==========================================
+:: 1. CONFIGURATION ALIGNMENT
+:: ==========================================
+SET "NGROK_TOKEN=YOUR_NGROK_AUTH_TOKEN_HERE"
+SET "DB_PASSWORD=sam@3012"
+SET "DB_PORT=3012"
+SET "API_PORT=5000"
+SET "FRONTEND_PORT=3000"
+
+:: ==========================================
+:: 2. ENVIRONMENT BRIDGES
+:: ==========================================
+echo [1/4] Aligning workspace ports...
+SET "PGPASSWORD=%DB_PASSWORD%"
+SET "DATABASE_URL=postgresql://postgres:%DB_PASSWORD%@127.0.0.1:%DB_PORT%/hms?schema=public"
+
+:: Inject environment variables that vite.config.ts reads
+SET "PORT=%FRONTEND_PORT%"
+SET "API_PORT=%API_PORT%"
+
+for /f "tokens=2 delims=:" %%A in ('ipconfig ^| findstr /i "IPv4"') do (
+    set "RAW_IP=%%A"
+    set "LOCAL_IP=!RAW_IP:~1!"
+    goto :FoundIP
+)
+:FoundIP
+
+:: Force Node to prioritize IPv4 routing tables globally over IPv6 loopbacks
+SET "NODE_OPTIONS=--dns-result-order=ipv4first"
+
+:: ==========================================
+:: 3. SERVERS INITIALIZATION
+:: ==========================================
+echo [2/4] Initializing proxy server validation...
+ngrok config add-authtoken %NGROK_TOKEN%
+
+echo [3/4] Starting secure Ngrok tunnel on Vite frontend port (%FRONTEND_PORT%)...
+start "Ngrok Tunnel Engine" ngrok http %FRONTEND_PORT%
+
+echo [4/4] Activating HMS Backend and Frontend Subsystems...
+start "HMS Core Server Log" cmd /k pnpm --filter @workspace/api-server --filter @workspace/hms run dev
+
+echo Waiting 7 seconds for the servers to cross-link...
+timeout /t 7 >nul
+
+:: ==========================================
+:: 4. DASHBOARD PRESENTATION
+:: ==========================================
+set "NGROK_URL=Awaiting tunnel handshake..."
+for /f "delims=" %%A in ('powershell -Command "(Invoke-RestMethod http://127.0.0).tunnels.public_url" 2^>nul') do (
+    set "NGROK_URL=%%A"
+)
+
+cls
+echo ==================================================
+echo 🚀 HOSPITAL MANAGEMENT SYSTEM RUNTIME CONTROLLER
+echo ==================================================
+echo.
+echo 🔗 Local UI Link   : http://localhost:%FRONTEND_PORT%
+echo 🔗 Network UI Link : http://%LOCAL_IP%:%FRONTEND_PORT%
+echo 🔗 API Server Link : http://%LOCAL_IP%:%API_PORT%
+echo.
+echo 🔗 Secure Public UI Link  : %NGROK_URL%
+echo ==================================================
+pause

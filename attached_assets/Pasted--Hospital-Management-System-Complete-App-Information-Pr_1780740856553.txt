@@ -1,0 +1,273 @@
+🏥 Hospital Management System (Complete App Information)
+📌 Project Overview
+
+A Hospital Management System (HMS) is a web application that helps hospitals manage patients, doctors, appointments, billing, medical records, and administration in one platform.
+
+The system reduces paperwork, improves patient care, and streamlines hospital operations.
+
+🎯 Main Objectives
+Manage patient information
+Book and track appointments
+Manage doctor schedules
+Store medical records
+Generate bills and reports
+Improve hospital workflow
+Provide admin control over the entire system
+👥 User Roles
+1. Admin
+Add/Edit/Delete doctors
+Manage patients
+View appointments
+Manage departments
+Generate reports
+Manage billing
+Control system settings
+2. Doctor
+View appointments
+Access patient records
+Write prescriptions
+Update diagnosis
+Manage availability
+3. Patient
+Register/Login
+Book appointments
+View medical history
+Download prescriptions
+Pay bills online
+🏗️ Modules
+Module 1: Authentication System
+Features
+Patient Registration
+Doctor Registration
+Admin Login
+Forgot Password
+Email Verification
+JWT Authentication
+Database Table
+users
+Field	Type
+id	INT
+name	VARCHAR
+email	VARCHAR
+password	VARCHAR
+role	ENUM
+created_at	TIMESTAMP
+Module 2: Patient Management
+Features
+Add Patient
+Update Patient
+Delete Patient
+Search Patient
+View Medical History
+Patient Information
+Patient ID
+Name
+Age
+Gender
+Blood Group
+Address
+Phone Number
+Emergency Contact
+Disease History
+Database Table
+patients
+Field	Type
+patient_id	INT
+name	VARCHAR
+age	INT
+gender	VARCHAR
+blood_group	VARCHAR
+address	TEXT
+phone	VARCHAR
+created_at	TIMESTAMP
+Module 3: Doctor Management
+Features
+Add Doctor
+Update Doctor
+Delete Doctor
+View Schedule
+Manage Availability
+Doctor Information
+Doctor ID
+Name
+Department
+Qualification
+Experience
+Availability
+Database Table
+doctors
+Field	Type
+doctor_id	INT
+name	VARCHAR
+specialization	VARCHAR
+experience	INT
+phone	VARCHAR
+email	VARCHAR
+Module 4: Appointment Booking
+Features
+Book Appointment
+Cancel Appointment
+Reschedule Appointment
+Appointment Status
+Workflow
+
+Patient → Select Doctor → Select Date → Select Time → Confirm Booking
+
+Database Table
+appointments
+Field	Type
+appointment_id	INT
+patient_id	INT
+doctor_id	INT
+date	DATE
+time	TIME
+status	VARCHAR
+Module 5: Doctor Dashboard
+Features
+Dashboard Cards
+Today's Appointments
+Total Patients
+Pending Appointments
+Completed Consultations
+Functions
+View Patient Records
+Add Prescription
+Update Diagnosis
+Upload Medical Reports
+Module 6: Electronic Medical Records (EMR)
+Features
+Medical History
+Lab Reports
+Diagnoses
+Prescriptions
+Previous Treatments
+Database Table
+medical_records
+Field	Type
+record_id	INT
+patient_id	INT
+diagnosis	TEXT
+prescription	TEXT
+treatment	TEXT
+created_at	TIMESTAMP
+Module 7: Billing System
+Features
+Consultation Fee
+Lab Charges
+Medicine Charges
+Payment History
+Invoice Download
+Database Table
+bills
+Field	Type
+bill_id	INT
+patient_id	INT
+amount	DECIMAL
+payment_status	VARCHAR
+payment_date	DATE
+Module 8: Pharmacy Management
+Features
+Medicine Inventory
+Stock Management
+Expiry Tracking
+Purchase History
+Database Table
+medicines
+Field	Type
+medicine_id	INT
+name	VARCHAR
+quantity	INT
+expiry_date	DATE
+price	DECIMAL
+Module 9: Laboratory Management
+Features
+Test Requests
+Test Results
+Report Generation
+Report Download
+Database Table
+lab_reports
+Field	Type
+report_id	INT
+patient_id	INT
+test_name	VARCHAR
+result	TEXT
+report_date	DATE
+Module 10: Reports & Analytics
+Admin Reports
+Daily Patients
+Monthly Revenue
+Doctor Performance
+Appointment Statistics
+Medicine Usage
+Charts
+Revenue Chart
+Patient Growth Chart
+Appointment Trends
+Doctor Workload
+🛠 Technology Stack
+Frontend
+HTML5
+CSS3
+JavaScript
+React.js
+Bootstrap / Tailwind CSS
+Backend
+Node.js
+Express.js
+
+OR
+
+Python
+Flask / Django
+Database
+MySQL
+
+OR
+
+PostgreSQL
+Authentication
+JWT
+bcrypt
+Cloud
+AWS
+Firebase
+📱 Pages Required
+Public Pages
+Home
+About
+Contact
+Login
+Register
+Patient Pages
+Dashboard
+Book Appointment
+Medical Records
+Bills
+Profile
+Doctor Pages
+Dashboard
+Appointments
+Patients
+Prescriptions
+Admin Pages
+Dashboard
+Doctors
+Patients
+Billing
+Reports
+🔥 Advanced Features
+AI Integration
+Disease Prediction
+Symptom Checker
+AI Chatbot
+Appointment Recommendations
+Notifications
+Email Alerts
+SMS Alerts
+Appointment Reminders
+Security
+Role-Based Access Control
+Data Encryption
+Audit Logs
+Secure Authentication

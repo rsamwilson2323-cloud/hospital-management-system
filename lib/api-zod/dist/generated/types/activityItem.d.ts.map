@@ -1,0 +1,1 @@
+{"version":3,"file":"activityItem.d.ts","sourceRoot":"","sources":["../../../src/generated/types/activityItem.ts"],"names":[],"mappings":"AAAA;;;;;;GAMG;AAEH,MAAM,WAAW,YAAY;IAC3B,EAAE,EAAE,MAAM,CAAC;IACX,IAAI,EAAE,MAAM,CAAC;IACb,WAAW,EAAE,MAAM,CAAC;IACpB,SAAS,EAAE,MAAM,CAAC;IAClB,gBAAgB;IAChB,QAAQ,CAAC,EAAE,MAAM,GAAG,IAAI,CAAC;CAC1B"}

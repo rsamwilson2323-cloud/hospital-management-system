@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "name": "Amoxicillin 500mg",
+    "quantity": 250,
+    "expiryDate": "2026-09-30",
+    "price": 12.99,
+    "manufacturer": "PharmaCo",
+    "category": "Antibiotic",
+    "createdAt": "2026-05-10T07:53:13.324Z"
+  },
+  {
+    "id": 2,
+    "name": "Metformin 850mg",
+    "quantity": 6,
+    "expiryDate": "2026-06-30",
+    "price": 8.5,
+    "manufacturer": "GenMed",
+    "category": "Antidiabetic",
+    "createdAt": "2026-05-10T07:53:13.324Z"
+  },
+  {
+    "id": 3,
+    "name": "Lisinopril 10mg",
+    "quantity": 180,
+    "expiryDate": "2026-12-31",
+    "price": 15.75,
+    "manufacturer": "CardioPharm",
+    "category": "Antihypertensive",
+    "createdAt": "2026-05-10T07:53:13.324Z"
+  },
+  {
+    "id": 4,
+    "name": "Atorvastatin 40mg",
+    "quantity": 4,
+    "expiryDate": "2025-12-31",
+    "price": 22,
+    "manufacturer": "LipidCare",
+    "category": "Statin",
+    "createdAt": "2026-05-10T07:53:13.324Z"
+  },
+  {
+    "id": 5,
+    "name": "Salbutamol Inhaler",
+    "quantity": 45,
+    "expiryDate": "2026-08-31",
+    "price": 18.5,
+    "manufacturer": "BreathEasy",
+    "category": "Bronchodilator",
+    "createdAt": "2026-05-10T07:53:13.324Z"
+  },
+  {
+    "id": 6,
+    "name": "Ibuprofen 400mg",
+    "quantity": 500,
+    "expiryDate": "2027-01-31",
+    "price": 6.25,
+    "manufacturer": "PainRelief Inc",
+    "category": "NSAID",
+    "createdAt": "2026-05-10T07:53:13.324Z"
+  },
+  {
+    "id": 7,
+    "name": "Omeprazole 20mg",
+    "quantity": 300,
+    "expiryDate": "2026-11-30",
+    "price": 9.99,
+    "manufacturer": "GastroCare",
+    "category": "PPI",
+    "createdAt": "2026-05-10T07:53:13.324Z"
+  },
+  {
+    "id": 8,
+    "name": "Paracetamol 500mg",
+    "quantity": 750,
+    "expiryDate": "2027-06-30",
+    "price": 4.5,
+    "manufacturer": "BasicMed",
+    "category": "Analgesic",
+    "createdAt": "2026-05-10T07:53:13.324Z"
+  },
+  {
+    "id": 9,
+    "name": "Warfarin 5mg",
+    "quantity": 5,
+    "expiryDate": "2026-03-31",
+    "price": 35,
+    "manufacturer": "BloodCare",
+    "category": "Anticoagulant",
+    "createdAt": "2026-05-10T07:53:13.324Z"
+  },
+  {
+    "id": 10,
+    "name": "Levothyroxine 75mcg",
+    "quantity": 120,
+    "expiryDate": "2026-10-31",
+    "price": 11.25,
+    "manufacturer": "ThyroMed",
+    "category": "Thyroid Hormone",
+    "createdAt": "2026-05-10T07:53:13.324Z"
+  },
+  {
+    "id": 11,
+    "name": "Amlodipine 5mg",
+    "quantity": 200,
+    "expiryDate": "2027-02-28",
+    "price": 13.5,
+    "manufacturer": "CardioPharm",
+    "category": "Antihypertensive",
+    "createdAt": "2026-05-10T07:53:13.324Z"
+  },
+  {
+    "id": 12,
+    "name": "Tamoxifen 20mg",
+    "quantity": 60,
+    "expiryDate": "2026-07-31",
+    "price": 48,
+    "manufacturer": "OncoMed",
+    "category": "Anticancer",
+    "createdAt": "2026-05-10T07:53:13.324Z"
+  },
+  {
+    "id": 13,
+    "name": "Sumatriptan 50mg",
+    "quantity": 90,
+    "expiryDate": "2026-09-30",
+    "price": 28.75,
+    "manufacturer": "NeuroCare",
+    "category": "Antimigraine",
+    "createdAt": "2026-05-10T07:53:13.324Z"
+  },
+  {
+    "id": 14,
+    "name": "Fluticasone Inhaler",
+    "quantity": 8,
+    "expiryDate": "2026-08-31",
+    "price": 32,
+    "manufacturer": "BreathEasy",
+    "category": "Corticosteroid",
+    "createdAt": "2026-05-10T07:53:13.324Z"
+  },
+  {
+    "id": 15,
+    "name": "Ciprofloxacin 500mg",
+    "quantity": 90,
+    "expiryDate": "2026-08-31",
+    "price": 16.75,
+    "manufacturer": "PharmaCo",
+    "category": "Antibiotic",
+    "createdAt": "2026-05-10T07:53:13.324Z"
+  },
+  {
+    "id": 16,
+    "name": "Aspirin 75mg",
+    "quantity": 400,
+    "expiryDate": "2027-03-31",
+    "price": 5.99,
+    "manufacturer": "BasicMed",
+    "category": "Antiplatelet",
+    "createdAt": "2026-05-10T07:53:13.324Z"
+  },
+  {
+    "id": 17,
+    "name": "Bisoprolol 5mg",
+    "quantity": 7,
+    "expiryDate": "2026-05-31",
+    "price": 19.5,
+    "manufacturer": "CardioPharm",
+    "category": "Beta Blocker",
+    "createdAt": "2026-05-10T07:53:13.324Z"
+  },
+  {
+    "id": 18,
+    "name": "Topiramate 50mg",
+    "quantity": 80,
+    "expiryDate": "2027-01-31",
+    "price": 24,
+    "manufacturer": "NeuroCare",
+    "category": "Anticonvulsant",
+    "createdAt": "2026-05-10T07:53:13.324Z"
+  },
+  {
+    "id": 19,
+    "name": "Cetirizine 10mg",
+    "quantity": 350,
+    "expiryDate": "2027-04-30",
+    "price": 7.25,
+    "manufacturer": "AllergyMed",
+    "category": "Antihistamine",
+    "createdAt": "2026-05-10T07:53:13.324Z"
+  },
+  {
+    "id": 20,
+    "name": "Clopidogrel 75mg",
+    "quantity": 30,
+    "expiryDate": "2026-09-30",
+    "price": 31,
+    "manufacturer": "CardioPharm",
+    "category": "Antiplatelet",
+    "createdAt": "2026-05-10T07:53:13.324Z"
+  }
+]

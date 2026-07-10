@@ -1,0 +1,132 @@
+[
+  {
+    "id": 1,
+    "patientId": 1,
+    "doctorId": 1,
+    "diagnosis": "Essential Hypertension Stage 1",
+    "prescription": "Lisinopril 10mg once daily, Amlodipine 5mg",
+    "treatment": "Low-sodium diet, aerobic exercise 30 min/day",
+    "notes": "BP 145/92. Good compliance. Follow up 4 weeks.",
+    "createdAt": "2026-06-17T07:53:13.324Z"
+  },
+  {
+    "id": 2,
+    "patientId": 2,
+    "doctorId": 7,
+    "diagnosis": "Type 2 Diabetes Mellitus with Dyslipidaemia",
+    "prescription": "Metformin 850mg BD, Atorvastatin 40mg nightly, Glipizide 5mg",
+    "treatment": "Dietary counseling, BGL monitoring twice daily",
+    "notes": "HbA1c 7.8%. Target <7.0%.",
+    "createdAt": "2026-06-22T07:53:13.324Z"
+  },
+  {
+    "id": 3,
+    "patientId": 3,
+    "doctorId": 8,
+    "diagnosis": "Moderate Persistent Asthma",
+    "prescription": "Salbutamol inhaler 2 puffs PRN, Fluticasone 250mcg BD",
+    "treatment": "Breathing exercises, allergen avoidance",
+    "notes": "Peak flow 78%. Last exacerbation 3 months ago.",
+    "createdAt": "2026-05-13T07:53:13.324Z"
+  },
+  {
+    "id": 4,
+    "patientId": 4,
+    "doctorId": 4,
+    "diagnosis": "Right Knee Osteoarthritis Grade II",
+    "prescription": "Ibuprofen 400mg TDS with food, Pantoprazole 20mg",
+    "treatment": "Physiotherapy 2x/week, weight reduction advised",
+    "notes": "X-ray: moderate joint space narrowing medially.",
+    "createdAt": "2026-05-25T07:53:13.324Z"
+  },
+  {
+    "id": 5,
+    "patientId": 5,
+    "doctorId": 2,
+    "diagnosis": "Seasonal Allergic Rhinitis",
+    "prescription": "Cetirizine 10mg PRN, Fluticasone nasal spray",
+    "treatment": "Nasal irrigation, allergen avoidance plan",
+    "notes": "Worst in spring/autumn. Symptoms controlled.",
+    "createdAt": "2026-04-20T07:53:13.324Z"
+  },
+  {
+    "id": 6,
+    "patientId": 6,
+    "doctorId": 1,
+    "diagnosis": "Hypertensive Heart Disease + COPD",
+    "prescription": "Lisinopril 10mg, Aspirin 75mg, Tiotropium inhaler",
+    "treatment": "Pulmonary rehab, smoking cessation",
+    "notes": "Echo: mild LV hypertrophy. EF 55%. FEV1 62%.",
+    "createdAt": "2026-04-07T07:53:13.324Z"
+  },
+  {
+    "id": 7,
+    "patientId": 7,
+    "doctorId": 3,
+    "diagnosis": "Tension-Type Headache",
+    "prescription": "Paracetamol 500mg QDS PRN, Amitriptyline 10mg at night",
+    "treatment": "Stress management, sleep hygiene, hydration",
+    "notes": "3-4 headaches/week. Neuro exam normal. MRI pending.",
+    "createdAt": "2026-07-06T07:53:13.324Z"
+  },
+  {
+    "id": 8,
+    "patientId": 8,
+    "doctorId": 4,
+    "diagnosis": "Post-op: Right Hip Replacement",
+    "prescription": "Warfarin 5mg (INR target 2-3), Paracetamol 500mg QDS",
+    "treatment": "Daily physio, DVT prevention, weight bearing",
+    "notes": "INR 2.4 – therapeutic. Walking with frame.",
+    "createdAt": "2026-06-30T07:53:13.324Z"
+  },
+  {
+    "id": 9,
+    "patientId": 9,
+    "doctorId": 3,
+    "diagnosis": "Chronic Migraine with Aura",
+    "prescription": "Sumatriptan 50mg at onset, Topiramate 50mg BD (prevention)",
+    "treatment": "Migraine diary, trigger avoidance, regular sleep",
+    "notes": "MRI brain normal. 12 headache days/month.",
+    "createdAt": "2026-06-12T07:53:13.324Z"
+  },
+  {
+    "id": 10,
+    "patientId": 10,
+    "doctorId": 7,
+    "diagnosis": "Hypothyroidism",
+    "prescription": "Levothyroxine 75mcg daily (fasting, 30 min before food)",
+    "treatment": "Recheck TSH in 6 weeks.",
+    "notes": "TSH 6.2 mIU/L. Dose increased from 50mcg.",
+    "createdAt": "2026-06-24T07:53:13.324Z"
+  },
+  {
+    "id": 11,
+    "patientId": 11,
+    "doctorId": 6,
+    "diagnosis": "Breast Cancer Stage II (Remission)",
+    "prescription": "Tamoxifen 20mg once daily (5-year course, year 3)",
+    "treatment": "Quarterly oncology reviews, annual mammography",
+    "notes": "No evidence of recurrence. CA-125 and CEA normal.",
+    "createdAt": "2026-06-02T07:53:13.324Z"
+  },
+  {
+    "id": 12,
+    "patientId": 13,
+    "doctorId": 7,
+    "diagnosis": "Type 2 Diabetes Mellitus",
+    "prescription": "Metformin 500mg BD, Gliclazide 40mg with breakfast",
+    "treatment": "Carb counting, exercise 4x/week",
+    "notes": "HbA1c 8.1%. Diet poorly controlled. Educator referral.",
+    "createdAt": "2026-06-27T07:53:13.324Z"
+  },
+  {
+    "id": 13,
+    "patientId": 15,
+    "doctorId": 1,
+    "diagnosis": "Coronary Artery Disease – Post MI",
+    "prescription": "Aspirin 75mg, Clopidogrel 75mg, Atorvastatin 80mg, Bisoprolol 5mg, Ramipril 5mg",
+    "treatment": "Cardiac rehab, Mediterranean diet",
+    "notes": "MI 6 months ago. EF 50%. Stress test normal.",
+    "createdAt": "2026-06-03T07:53:13.324Z"
+  }
+]

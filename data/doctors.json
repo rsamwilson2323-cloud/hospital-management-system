@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. Catherine Walsh",
+    "specialization": "Cardiology",
+    "qualification": "MD, FACC",
+    "experience": 18,
+    "phone": "555-0201",
+    "email": "c.walsh@hospital.com",
+    "availability": "Mon-Fri 9am-5pm",
+    "createdAt": "2026-03-11T07:53:13.324Z"
+  },
+  {
+    "id": 2,
+    "name": "Dr. Samuel Okafor",
+    "specialization": "General Medicine",
+    "qualification": "MBBS, MD",
+    "experience": 12,
+    "phone": "555-0202",
+    "email": "s.okafor@hospital.com",
+    "availability": "Mon-Sat 8am-4pm",
+    "createdAt": "2026-03-11T07:53:13.324Z"
+  },
+  {
+    "id": 3,
+    "name": "Dr. Linda Nakamura",
+    "specialization": "Neurology",
+    "qualification": "MD, PhD",
+    "experience": 22,
+    "phone": "555-0203",
+    "email": "l.nakamura@hospital.com",
+    "availability": "Tue-Thu 10am-6pm",
+    "createdAt": "2026-03-11T07:53:13.324Z"
+  },
+  {
+    "id": 4,
+    "name": "Dr. Ahmed Hassan",
+    "specialization": "Orthopedics",
+    "qualification": "MS, FRCS",
+    "experience": 15,
+    "phone": "555-0204",
+    "email": "a.hassan@hospital.com",
+    "availability": "Mon-Fri 8am-3pm",
+    "createdAt": "2026-03-11T07:53:13.324Z"
+  },
+  {
+    "id": 5,
+    "name": "Dr. Rachel Kim",
+    "specialization": "Pediatrics",
+    "qualification": "MD, FAAP",
+    "experience": 9,
+    "phone": "555-0205",
+    "email": "r.kim@hospital.com",
+    "availability": "Mon-Fri 9am-5pm",
+    "createdAt": "2026-03-11T07:53:13.324Z"
+  },
+  {
+    "id": 6,
+    "name": "Dr. Michael Torres",
+    "specialization": "Oncology",
+    "qualification": "MD, FASCO",
+    "experience": 20,
+    "phone": "555-0206",
+    "email": "m.torres@hospital.com",
+    "availability": "Wed-Fri 10am-4pm",
+    "createdAt": "2026-03-11T07:53:13.324Z"
+  },
+  {
+    "id": 7,
+    "name": "Dr. Priya Sharma",
+    "specialization": "Endocrinology",
+    "qualification": "MD, DM",
+    "experience": 14,
+    "phone": "555-0207",
+    "email": "p.sharma@hospital.com",
+    "availability": "Mon-Wed 9am-5pm",
+    "createdAt": "2026-03-11T07:53:13.324Z"
+  },
+  {
+    "id": 8,
+    "name": "Dr. James Whitfield",
+    "specialization": "Pulmonology",
+    "qualification": "MD, FCCP",
+    "experience": 17,
+    "phone": "555-0208",
+    "email": "j.whitfield@hospital.com",
+    "availability": "Tue-Sat 8am-4pm",
+    "createdAt": "2026-03-11T07:53:13.324Z"
+  }
+]

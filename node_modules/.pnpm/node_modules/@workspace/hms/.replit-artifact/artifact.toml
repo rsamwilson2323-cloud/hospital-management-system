@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Hospital Management System"
+version = "1.0.0"
+id = "artifacts/hms"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 22938
+
+[services.development]
+run = "pnpm --filter @workspace/hms run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/hms", "run", "build" ]
+publicDir = "artifacts/hms/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22938"
+BASE_PATH = "/"

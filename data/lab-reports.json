@@ -1,0 +1,200 @@
+[
+  {
+    "id": 1,
+    "patientId": 1,
+    "testName": "ECG (12-lead)",
+    "result": "Sinus rhythm. LVH pattern. No acute ST changes.",
+    "status": "completed",
+    "reportDate": "2026-06-17",
+    "createdAt": "2026-06-17T07:53:13.324Z"
+  },
+  {
+    "id": 2,
+    "patientId": 1,
+    "testName": "Lipid Panel",
+    "result": "Total Chol: 198, LDL: 120, HDL: 52, TG: 130. All within target.",
+    "status": "completed",
+    "reportDate": "2026-06-17",
+    "createdAt": "2026-06-17T07:53:13.324Z"
+  },
+  {
+    "id": 3,
+    "patientId": 2,
+    "testName": "HbA1c",
+    "result": "7.8% (target <7.0%)",
+    "status": "completed",
+    "reportDate": "2026-06-22",
+    "createdAt": "2026-06-22T07:53:13.324Z"
+  },
+  {
+    "id": 4,
+    "patientId": 2,
+    "testName": "Fasting Glucose",
+    "result": "9.2 mmol/L (high)",
+    "status": "completed",
+    "reportDate": "2026-06-22",
+    "createdAt": "2026-06-22T07:53:13.324Z"
+  },
+  {
+    "id": 5,
+    "patientId": 2,
+    "testName": "Lipid Panel",
+    "result": "Total Chol: 245, LDL: 168, HDL: 42, TG: 175. LDL elevated.",
+    "status": "completed",
+    "reportDate": "2026-06-22",
+    "createdAt": "2026-06-22T07:53:13.324Z"
+  },
+  {
+    "id": 6,
+    "patientId": 3,
+    "testName": "Spirometry",
+    "result": "FEV1: 72% predicted, FEV1/FVC: 0.74. Mild obstruction.",
+    "status": "completed",
+    "reportDate": "2026-05-13",
+    "createdAt": "2026-05-13T07:53:13.324Z"
+  },
+  {
+    "id": 7,
+    "patientId": 4,
+    "testName": "X-Ray Right Knee",
+    "result": "Grade II OA. Moderate joint space narrowing medially. No fracture.",
+    "status": "completed",
+    "reportDate": "2026-05-25",
+    "createdAt": "2026-05-25T07:53:13.324Z"
+  },
+  {
+    "id": 8,
+    "patientId": 5,
+    "testName": "Full Blood Count",
+    "result": "WBC: 6.8, RBC: 4.6, Hgb: 13.9, Plt: 260. All normal.",
+    "status": "completed",
+    "reportDate": "2026-04-20",
+    "createdAt": "2026-04-20T07:53:13.324Z"
+  },
+  {
+    "id": 9,
+    "patientId": 6,
+    "testName": "Echocardiogram",
+    "result": "Mild LV hypertrophy. EF: 55%. No wall motion abnormalities.",
+    "status": "completed",
+    "reportDate": "2026-04-07",
+    "createdAt": "2026-04-07T07:53:13.324Z"
+  },
+  {
+    "id": 10,
+    "patientId": 6,
+    "testName": "Spirometry",
+    "result": "FEV1/FVC: 0.62 (moderate obstructive pattern). FEV1: 58% predicted.",
+    "status": "completed",
+    "reportDate": "2026-04-07",
+    "createdAt": "2026-04-07T07:53:13.324Z"
+  },
+  {
+    "id": 11,
+    "patientId": 8,
+    "testName": "PT/INR",
+    "result": "INR: 2.4 (therapeutic range 2.0-3.0)",
+    "status": "completed",
+    "reportDate": "2026-06-30",
+    "createdAt": "2026-06-30T07:53:13.324Z"
+  },
+  {
+    "id": 12,
+    "patientId": 9,
+    "testName": "MRI Brain",
+    "result": "No space-occupying lesion. No acute infarct. Mild periventricular changes.",
+    "status": "completed",
+    "reportDate": "2026-06-12",
+    "createdAt": "2026-06-12T07:53:13.324Z"
+  },
+  {
+    "id": 13,
+    "patientId": 10,
+    "testName": "Thyroid Function (TSH/T4)",
+    "result": "TSH: 6.2 mIU/L (high). Free T4: 12.1 pmol/L (low normal). Consistent with hypothyroidism.",
+    "status": "completed",
+    "reportDate": "2026-06-24",
+    "createdAt": "2026-06-24T07:53:13.324Z"
+  },
+  {
+    "id": 14,
+    "patientId": 11,
+    "testName": "CA-125 Tumour Marker",
+    "result": "18 U/mL (normal <35 U/mL). No evidence of recurrence.",
+    "status": "completed",
+    "reportDate": "2026-06-02",
+    "createdAt": "2026-06-02T07:53:13.324Z"
+  },
+  {
+    "id": 15,
+    "patientId": 11,
+    "testName": "CEA",
+    "result": "2.1 ng/mL (normal <5 ng/mL).",
+    "status": "completed",
+    "reportDate": "2026-06-02",
+    "createdAt": "2026-06-02T07:53:13.324Z"
+  },
+  {
+    "id": 16,
+    "patientId": 13,
+    "testName": "HbA1c",
+    "result": "8.1% (poorly controlled)",
+    "status": "completed",
+    "reportDate": "2026-06-27",
+    "createdAt": "2026-06-27T07:53:13.324Z"
+  },
+  {
+    "id": 17,
+    "patientId": 15,
+    "testName": "Stress ECG",
+    "result": "No ischaemic changes at target HR. Functional capacity good.",
+    "status": "completed",
+    "reportDate": "2026-06-03",
+    "createdAt": "2026-06-03T07:53:13.324Z"
+  },
+  {
+    "id": 18,
+    "patientId": 15,
+    "testName": "Echocardiogram",
+    "result": "EF: 50%. Mild inferior wall hypokinesia. No significant valvular disease.",
+    "status": "completed",
+    "reportDate": "2026-06-03",
+    "createdAt": "2026-06-03T07:53:13.324Z"
+  },
+  {
+    "id": 19,
+    "patientId": 1,
+    "testName": "Renal Function Panel",
+    "result": null,
+    "status": "pending",
+    "reportDate": "2026-07-09",
+    "createdAt": "2026-07-09T07:53:13.324Z"
+  },
+  {
+    "id": 20,
+    "patientId": 7,
+    "testName": "MRI Brain",
+    "result": null,
+    "status": "pending",
+    "reportDate": "2026-07-09",
+    "createdAt": "2026-07-09T07:53:13.324Z"
+  },
+  {
+    "id": 21,
+    "patientId": 3,
+    "testName": "IgE Allergy Panel",
+    "result": null,
+    "status": "pending",
+    "reportDate": "2026-07-10",
+    "createdAt": "2026-07-09T07:53:13.325Z"
+  },
+  {
+    "id": 22,
+    "patientId": 14,
+    "testName": "X-Ray Right Shoulder",
+    "result": null,
+    "status": "pending",
+    "reportDate": "2026-07-09",
+    "createdAt": "2026-07-09T07:53:13.325Z"
+  }
+]

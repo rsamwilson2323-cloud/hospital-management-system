@@ -1,0 +1,172 @@
+@echo off
+setlocal enabledelayedexpansion
+title Hospital Management System
+color 0A
+
+echo ============================================
+echo    Hospital Management System - Startup
+echo ============================================
+echo.
+
+:: ── CONFIG ──────────────────────────────────────
+set "PGBIN=D:\PostgreSQL18\bin"
+set "PGDATA=D:\PostgreSQL18\data"
+set "PGPORT=2323"
+set "PGUSER=postgres"
+set APP_PORT=3000
+set API_PORT=8080
+set NGROK_AUTHTOKEN=PASTE_YOUR_NGROK_AUTHTOKEN_HERE
+:: ────────────────────────────────────────────────
+
+set "PATH=!PGBIN!;%PATH%"
+
+:: ── STEP 1: Kill stale processes and lock file ──
+echo [STEP 1] Cleaning up stale PostgreSQL processes...
+taskkill /f /im postgres.exe >nul 2>&1
+taskkill /f /im pg_ctl.exe >nul 2>&1
+timeout /t 2 /nobreak >nul
+if exist "!PGDATA!\postmaster.pid" (
+    echo [INFO] Removing stale postmaster.pid...
+    del /f "!PGDATA!\postmaster.pid"
+)
+echo [OK] Cleanup done.
+echo.
+
+:: ── STEP 2: Start PostgreSQL service ────────────
+echo [STEP 2] Starting PostgreSQL service...
+net start postgresql-x64-18 >nul 2>&1
+timeout /t 4 /nobreak >nul
+
+:: ── STEP 3: Test port 2323 ───────────────────────
+echo [STEP 3] Testing PostgreSQL on port %PGPORT%...
+powershell -NoProfile -Command "try { $t = New-Object Net.Sockets.TcpClient('localhost',%PGPORT%); $t.Close(); exit 0 } catch { exit 1 }" >nul 2>&1
+if %ERRORLEVEL% neq 0 (
+    echo [INFO] Service start may need a moment, waiting more...
+    timeout /t 6 /nobreak >nul
+    powershell -NoProfile -Command "try { $t = New-Object Net.Sockets.TcpClient('localhost',%PGPORT%); $t.Close(); exit 0 } catch { exit 1 }" >nul 2>&1
+    if !ERRORLEVEL! neq 0 (
+        echo [ERROR] PostgreSQL not reachable on port %PGPORT%.
+        echo Check services.msc - start postgresql-x64-18 manually then re-run.
+        pause & exit /b 1
+    )
+)
+echo [OK] PostgreSQL is running on port %PGPORT%!
+echo.
+
+:: ── STEP 4: Write .env with correct port ─────────
+echo [STEP 4] Setting up .env...
+echo DATABASE_URL=postgresql://postgres:@3012@localhost:%PGPORT%/hms> .env
+echo [OK] .env written: postgresql://postgres:@3012@localhost:%PGPORT%/hms
+echo.
+
+:: Read DATABASE_URL safely
+set "DATABASE_URL="
+for /f "usebackq delims=" %%L in (".env") do (
+    set "LINE=%%L"
+    if "!LINE:~0,12!"=="DATABASE_URL" set "DATABASE_URL=!LINE:~13!"
+)
+
+:: ── STEP 5: Create hms database ─────────────────
+echo [STEP 5] Creating hms database if missing...
+"!PGBIN!\psql.exe" -U %PGUSER% -h localhost -p %PGPORT% -c "CREATE DATABASE hms;" -w 2>nul
+echo [OK] Database check done.
+echo.
+
+:: ── STEP 6: Node.js and pnpm ────────────────────
+where node >nul 2>&1
+if %ERRORLEVEL% neq 0 (
+    echo [ERROR] Node.js not installed. Get it from https://nodejs.org/
+    pause & exit /b 1
+)
+where pnpm >nul 2>&1
+if %ERRORLEVEL% neq 0 (
+    echo [INFO] Installing pnpm...
+    npm install -g pnpm
+)
+echo [OK] Node.js and pnpm ready.
+echo.
+
+if exist "node_modules" (
+    echo [INFO] Cleaning node_modules...
+    rmdir /s /q node_modules 2>nul
+)
+
+echo [INFO] Installing dependencies...
+call pnpm install --no-frozen-lockfile
+if %ERRORLEVEL% neq 0 (
+    echo [ERROR] pnpm install failed.
+    pause & exit /b 1
+)
+echo [OK] Dependencies installed.
+echo.
+
+echo [INFO] Building libraries...
+call pnpm run typecheck:libs
+echo.
+
+:: ── STEP 7: Drizzle push ─────────────────────────
+echo [STEP 7] Pushing database schema...
+call pnpm --filter @workspace/db run push
+if %ERRORLEVEL% neq 0 (
+    echo.
+    echo [ERROR] Schema push failed. See error above.
+    pause & exit /b 1
+)
+echo [OK] Database schema ready.
+echo.
+
+:: ── STEP 8: WiFi IP ──────────────────────────────
+set "WIFI_IP=unavailable"
+for /f "tokens=2 delims=:" %%I in ('ipconfig ^| findstr /i "IPv4" ^| findstr /v "127.0.0.1"') do (
+    set "RAW=%%I"
+    set "RAW=!RAW: =!"
+    if not "!RAW!"=="" set "WIFI_IP=!RAW!"
+)
+
+:: ── STEP 9: Ngrok ────────────────────────────────
+set "NGROK_URL=Not configured"
+where ngrok >nul 2>&1
+if %ERRORLEVEL% equ 0 (
+    if not "%NGROK_AUTHTOKEN%"=="PASTE_YOUR_NGROK_AUTHTOKEN_HERE" (
+        ngrok config add-authtoken %NGROK_AUTHTOKEN% >nul 2>&1
+        start "HMS-Ngrok" cmd /k "ngrok http %APP_PORT%"
+        timeout /t 5 /nobreak >nul
+        for /f "delims=" %%U in ('powershell -NoProfile -Command "(Invoke-RestMethod http://127.0.0.1:4040/api/tunnels).tunnels[0].public_url" 2^>nul') do set "NGROK_URL=%%U"
+    )
+)
+
+:: ── STEP 10: Start servers ────────────────────────
+echo [INFO] Starting API server on port %API_PORT%...
+start "HMS-API" cmd /k "cd /d "%~dp0" && set PORT=%API_PORT% && set PATH=D:\PostgreSQL18\bin;%PATH% && pnpm --filter @workspace/api-server run dev"
+
+echo [INFO] Waiting for API to boot...
+timeout /t 8 /nobreak >nul
+
+echo [INFO] Starting Frontend on port %APP_PORT%...
+start "HMS-Frontend" cmd /k "cd /d "%~dp0" && set PORT=%APP_PORT% && set BASE_PATH=/ && pnpm --filter @workspace/hms run dev"
+
+echo [INFO] Waiting for frontend...
+timeout /t 15 /nobreak >nul
+
+:: ── FINAL BANNER ─────────────────────────────────
+echo.
+echo +==============================================+
+echo ^|    Hospital Management System - RUNNING      ^|
+echo +==============================================+
+echo ^|                                              ^|
+echo ^|  Localhost : http://localhost:%APP_PORT%              ^|
+echo ^|  WiFi IP   : http://!WIFI_IP!:%APP_PORT%    ^|
+echo ^|  API       : http://localhost:%API_PORT%              ^|
+if not "!NGROK_URL!"=="Not configured" (
+echo ^|  Ngrok     : !NGROK_URL!       ^|
+) else (
+echo ^|  Ngrok     : Not configured                  ^|
+)
+echo ^|                                              ^|
+echo ^|  Keep all terminal windows open.             ^|
+echo +==============================================+
+echo.
+timeout /t 3 /nobreak >nul
+start "" "http://localhost:%APP_PORT%"
+pause
+endlocal

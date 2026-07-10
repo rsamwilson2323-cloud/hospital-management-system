@@ -1,0 +1,43 @@
+
+> @workspace/hms@0.0.0 dev D:\main coding\hospital-management-system\artifacts\hms
+> vite --config vite.config.ts --host 0.0.0.0
+
+D:\main coding\hospital-management-system\node_modules\.pnpm\rollup@4.60.3\node_modules\rollup\dist\native.js:115
+                throw new Error(
+                      ^
+
+Error: Cannot find module @rollup/rollup-win32-x64-msvc. npm has a bug related to optional dependencies (https://github.com/npm/cli/issues/4828). Please try `npm i` again after removing both package-lock.json and node_modules directory.
+    at requireWithFriendlyError (D:\main coding\hospital-management-system\node_modules\.pnpm\rollup@4.60.3\node_modules\rollup\dist\native.js:115:9)
+    at Object.<anonymous> (D:\main coding\hospital-management-system\node_modules\.pnpm\rollup@4.60.3\node_modules\rollup\dist\native.js:124:76)
+    ... 3 lines matching cause stack trace ...
+    at Module._load (node:internal/modules/cjs/loader:1091:12)
+    at cjsLoader (node:internal/modules/esm/translators:298:15)
+    at ModuleWrap.<anonymous> (node:internal/modules/esm/translators:240:7)
+    at ModuleJob.run (node:internal/modules/esm/module_job:325:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:606:24) {
+  [cause]: Error: Cannot find module '@rollup/rollup-win32-x64-msvc'
+  Require stack:
+  - D:\main coding\hospital-management-system\node_modules\.pnpm\rollup@4.60.3\node_modules\rollup\dist\native.js
+      at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)
+      at Module._load (node:internal/modules/cjs/loader:1038:27)
+      at Module.require (node:internal/modules/cjs/loader:1289:19)
+      at require (node:internal/modules/helpers:182:18)
+      at requireWithFriendlyError (D:\main coding\hospital-management-system\node_modules\.pnpm\rollup@4.60.3\node_modules\rollup\dist\native.js:97:10)
+      at Object.<anonymous> (D:\main coding\hospital-management-system\node_modules\.pnpm\rollup@4.60.3\node_modules\rollup\dist\native.js:124:76)
+      at Module._compile (node:internal/modules/cjs/loader:1521:14)
+      at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+      at Module.load (node:internal/modules/cjs/loader:1266:32)
+      at Module._load (node:internal/modules/cjs/loader:1091:12) {
+    code: 'MODULE_NOT_FOUND',
+    requireStack: [
+      'D:\\main coding\\hospital-management-system\\node_modules\\.pnpm\\rollup@4.60.3\\node_modules\\rollup\\dist\\native.js'
+    ]
+  }
+}
+
+Node.js v20.19.6
+D:\main coding\hospital-management-system\artifacts\hms:
+ ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL  @workspace/hms@0.0.0 dev: `vite --config vite.config.ts --host 0.0.0.0`
+Exit status 1
+
+D:\main coding\hospital-management-system>^X

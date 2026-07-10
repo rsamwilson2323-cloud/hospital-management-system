@@ -1,0 +1,1 @@
+{"version":3,"file":"listAppointmentsParams.d.ts","sourceRoot":"","sources":["../../../src/generated/types/listAppointmentsParams.ts"],"names":[],"mappings":"AAAA;;;;;;GAMG;AAEH,MAAM,MAAM,sBAAsB,GAAG;IACrC,SAAS,CAAC,EAAE,MAAM,CAAC;IACnB,QAAQ,CAAC,EAAE,MAAM,CAAC;IAClB,MAAM,CAAC,EAAE,MAAM,CAAC;IAChB,IAAI,CAAC,EAAE,MAAM,CAAC;CACb,CAAC"}
